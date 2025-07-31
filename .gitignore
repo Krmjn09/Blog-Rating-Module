@@ -1,0 +1,36 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environment
+venv/
+.env/
+.env.*
+
+# Django stuff
+*.log
+db.sqlite3
+media/
+staticfiles/
+
+# VS Code
+.vscode/
+
+# Pytest
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Migrations (optional)
+**/migrations/*.pyc
+**/migrations/__pycache__/
+**/migrations/*.sqlite3
+
+# macOS/Linux
+.DS_Store
+*.swp
+
+# MyPy, Pyright, etc
+.mypy_cache/
+.pyright/
