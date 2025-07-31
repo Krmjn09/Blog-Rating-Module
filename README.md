@@ -1,6 +1,7 @@
 # Blog Rating Module
 
 ## Directory Structure 
+```
 blog-rating-app/
 ├── backend/                          # Django backend
 │   ├── blog_backend/                # Django project root
@@ -46,3 +47,4 @@ blog-rating-app/
 ├── .gitignore
 ├── README.md
 └── run.sh                         # Optional: script to run full stack
+```
