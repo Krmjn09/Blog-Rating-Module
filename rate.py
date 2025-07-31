@@ -1,9 +1,10 @@
 # rate_blog.py
-
 import os
 from textblob import TextBlob
 import google.generativeai as genai
+from dotenv import load_dotenv
 
+load_dotenv()
 # Setup Gemini
 genai.configure(api_key=os.getenv("GOOGLE_API_KEY"))
 gemini = genai.GenerativeModel("gemini-2.5-flash")
@@ -41,4 +42,4 @@ def rate_blog(content):
 # Test
 if __name__ == "__main__":
     blog = "The article was insightful, though a bit verbose. It discussed AI trends well."
-    print("Hybrid Rating:", rate_blog(blog))
+    print("Hybrid Rating:", rate_blogc(blog))
