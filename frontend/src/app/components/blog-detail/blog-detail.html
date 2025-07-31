@@ -1,1 +1,17 @@
-<p>blog-detail works!</p>
+<div *ngIf="blog">
+  <h2>{{ blog.title }}</h2>
+  <p><strong>By:</strong> {{ blog.user_name }}</p>
+  <p><strong>Published:</strong> {{ blog.time | date:'medium' }}</p>
+  <p><strong>Tag:</strong> {{ blog.tag }}</p>
+  <p><strong>Content:</strong></p>
+  <p>{{ blog.content }}</p>
+
+  <hr/>
+  <p><strong>Likes:</strong> {{ blog.likes }}</p>
+  <p><strong>Comments:</strong> {{ blog.comments }}</p>
+  <p><strong>Rating:</strong> {{ blog.rating }}/5</p>
+</div>
+
+<div *ngIf="!blog">
+  <p>Loading blog...</p>
+</div>

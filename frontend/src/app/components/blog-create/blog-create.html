@@ -1,1 +1,40 @@
-<p>blog-create works!</p>
+<h2>Create New Blog</h2>
+
+<form (ngSubmit)="submitBlog()" #blogForm="ngForm">
+  <label>
+    Username:
+    <input type="text" [(ngModel)]="blog.user_name" name="user_name" required />
+  </label><br/>
+
+  <label>
+    Title:
+    <input type="text" [(ngModel)]="blog.title" name="title" required />
+  </label><br/>
+
+  <label>
+    Content:
+    <textarea [(ngModel)]="blog.content" name="content" rows="5" required></textarea>
+  </label><br/>
+
+  <label>
+    Tag:
+    <input type="text" [(ngModel)]="blog.tag" name="tag" />
+  </label><br/>
+
+  <label>
+    Likes:
+    <input type="number" [(ngModel)]="blog.likes" name="likes" />
+  </label><br/>
+
+  <label>
+    Comments:
+    <input type="number" [(ngModel)]="blog.comments" name="comments" />
+  </label><br/>
+
+  <label>
+    Rating:
+    <input type="number" [(ngModel)]="blog.rating" name="rating" step="0.1" />
+  </label><br/>
+
+  <button type="submit" [disabled]="blogForm.invalid">Submit</button>
+</form>

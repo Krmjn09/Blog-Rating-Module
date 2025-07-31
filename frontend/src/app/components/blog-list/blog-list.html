@@ -1,1 +1,6 @@
-<p>blog-list works!</p>
+<div *ngFor="let blog of blogs">
+  <h3>
+    <a [routerLink]="['/blog', blog.id]">{{ blog.title }}</a>
+  </h3>
+  <p>{{ blog.content.slice(0, 100) }}...</p>
+</div>
