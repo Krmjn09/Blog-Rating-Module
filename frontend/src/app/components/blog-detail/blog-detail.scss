@@ -1,0 +1,88 @@
+// blog-detail.component.scss
+
+body {
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(135deg, #0f2d21, #1c4e36);
+  min-height: 100vh;
+  font-family: 'Segoe UI', sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #e8f5e9;
+}
+
+div {
+  max-width: 800px;
+  width: 90%;
+  background-color: #1e3c2f;
+  padding: 30px 40px;
+  border-radius: 14px;
+  box-shadow: 0 10px 25px rgba(0, 100, 0, 0.3);
+  margin: 50px auto;
+  transition: transform 0.3s ease-in-out;
+}
+
+h2 {
+  font-size: 30px;
+  color: #a5d6a7;
+  margin-bottom: 10px;
+}
+
+p {
+  line-height: 1.6;
+  margin-bottom: 10px;
+  color: #d0f0dc;
+  font-size: 16px;
+
+  strong {
+    color: #81c784;
+  }
+}
+
+hr {
+  border: none;
+  height: 1px;
+  background-color: #2f5e46;
+  margin: 20px 0;
+}
+
+p:last-child {
+  margin-bottom: 0;
+}
+
+// Loading style
+div:has(p:contains("Loading blog...")) {
+  text-align: center;
+  font-style: italic;
+  color: #b2dfdb;
+}
+
+// Responsive design
+@media (max-width: 768px) {
+  div {
+    padding: 25px;
+  }
+
+  h2 {
+    font-size: 26px;
+  }
+
+  p {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  div {
+    padding: 20px;
+  }
+
+  h2 {
+    font-size: 24px;
+  }
+
+  p {
+    font-size: 14px;
+  }
+}

@@ -1,0 +1,15 @@
+/* styles.scss (recommended) or app.component.scss */
+
+body {
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(135deg, #0e2a1f, #1b4d37);
+  min-height: 100vh;
+  font-family: 'Segoe UI', sans-serif;
+  color: #e0f2f1;
+}
+
+/* Optional: apply to html as well for safety */
+html {
+  background: inherit;
+}

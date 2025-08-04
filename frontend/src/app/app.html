@@ -1,8 +1,10 @@
-<!-- Optional: Simple navbar -->
-<nav style="padding: 1rem; background-color: #f0f0f0;">
-  <a routerLink="/" style="margin-right: 1rem;">Home</a>
-  <a routerLink="/create">Create Blog</a>
+<!-- app.component.html -->
+
+<nav style="padding: 1rem; background-color: #1e3c2f; color: #a5d6a7;">
+  <a routerLink="/" style="margin-right: 1rem; color: inherit; text-decoration: none;">Home</a>
+  <a routerLink="/create" style="color: inherit; text-decoration: none;">Create Blog</a>
 </nav>
 
-<!-- Routed component will render here -->
-<router-outlet></router-outlet>
+<main style="padding: 2rem;">
+  <router-outlet></router-outlet>
+</main>

@@ -1,0 +1,79 @@
+// blog-list.component.scss
+
+body {
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(135deg, #0e2a1f, #1b4d37);
+  min-height: 100vh;
+  font-family: 'Segoe UI', sans-serif;
+  display: flex;
+  justify-content: center;
+  color: #e0f2f1;
+}
+
+div {
+  max-width: 900px;
+  width: 90%;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: rgba(30, 60, 47, 0.9);
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 80, 0, 0.2);
+  transition: transform 0.3s ease-in-out;
+
+  &:hover {
+    transform: scale(1.01);
+  }
+
+  h3 {
+    font-size: 22px;
+    margin-bottom: 8px;
+
+    a {
+      color: #81c784;
+      text-decoration: none;
+      transition: color 0.3s ease;
+
+      &:hover {
+        color: #a5d6a7;
+        text-decoration: underline;
+      }
+    }
+  }
+
+  p {
+    font-size: 15px;
+    line-height: 1.5;
+    color: #c8e6c9;
+    margin-bottom: 20px;
+  }
+}
+
+// Responsive styles
+@media (max-width: 768px) {
+  div {
+    padding: 15px;
+
+    h3 {
+      font-size: 20px;
+    }
+
+    p {
+      font-size: 14px;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  div {
+    padding: 12px;
+
+    h3 {
+      font-size: 18px;
+    }
+
+    p {
+      font-size: 13px;
+    }
+  }
+}
