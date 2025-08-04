@@ -21,20 +21,7 @@
     <input type="text" [(ngModel)]="blog.tag" name="tag" />
   </label><br/>
 
-  <label>
-    Likes:
-    <input type="number" [(ngModel)]="blog.likes" name="likes" />
-  </label><br/>
-
-  <label>
-    Comments:
-    <input type="number" [(ngModel)]="blog.comments" name="comments" />
-  </label><br/>
-
-  <label>
-    Rating:
-    <input type="number" [(ngModel)]="blog.rating" name="rating" step="0.1" />
-  </label><br/>
+  <!-- Removed likes, comments, and rating inputs -->
 
   <button type="submit" [disabled]="blogForm.invalid">Submit</button>
 </form>

@@ -4,6 +4,7 @@ from rest_framework import status
 from .models import Blog
 from .serializers import BlogSerializer
 
+
 @api_view(['GET', 'POST'])
 def blog_list_create(request):
     if request.method == 'GET':
@@ -18,7 +19,8 @@ def blog_list_create(request):
             return Response(serializer.data, status=status.HTTP_201_CREATED)
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
-@api_view(['GET', 'PUT', 'DELETE'])
+
+@api_view(['GET', 'PUT', 'PATCH', 'DELETE'])
 def blog_detail(request, pk):
     try:
         blog = Blog.objects.get(pk=pk)
@@ -31,6 +33,13 @@ def blog_detail(request, pk):
 
     elif request.method == 'PUT':
         serializer = BlogSerializer(blog, data=request.data)
+        if serializer.is_valid():
+            serializer.save()
+            return Response(serializer.data)
+        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+
+    elif request.method == 'PATCH':
+        serializer = BlogSerializer(blog, data=request.data, partial=True)
         if serializer.is_valid():
             serializer.save()
             return Response(serializer.data)
